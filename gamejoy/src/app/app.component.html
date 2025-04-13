@@ -1,0 +1,10 @@
+<div class="app-wrapper">
+  <app-header></app-header>
+
+  <div *ngIf="isLoading; else mainContent">
+    <mat-spinner id="spinner"></mat-spinner>
+  </div>
+  <ng-template #mainContent>
+    <router-outlet></router-outlet>
+  </ng-template>
+</div>

@@ -1,0 +1,132 @@
+#profile-container {
+  width: 80%;
+  margin: 20px auto;
+  background: rgba(50, 50, 50, 0.3);
+  border-radius: 5px;
+
+  #profile-tab-container {
+    padding: 30px;
+    width: 100%;
+    margin: 10px auto;
+
+    .tab-content {
+      margin: 12px auto;
+      background: rgba(250, 250, 250, 0.9);
+      padding: 10px 20px;
+      border-radius: 5px;
+
+
+      #password-strength-container {
+        position: relative;
+        background-color: #FFFFFF;
+        width: 51%;
+        min-height: fit-content;
+        padding: 15px;
+        margin: 0 0 80px 90px;
+        border: 1px solid rgba(150, 150, 150, 0.4);
+
+        .valid-password {
+          color: green;
+        }
+
+        .invalid {
+          color: #870000;
+        }
+
+        #password-strength-display {
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          margin-top: 10px;
+
+          .password-strength-display-item {
+            width: 22%;
+            height: 20px;
+            background: rgba(100, 100, 100, 0.35);
+          }
+
+          .weak {
+            background: rgba(139,0,0, 0.65);
+          }
+
+          .medium {
+            background: rgba(255,165,0, 0.65);
+          }
+
+          .strong {
+            background: rgba(144,238,144, 0.8);
+          }
+
+          .very-strong {
+            background: rgba(50,205,50, 0.8);
+            background: green;
+          }
+        }
+
+        #arrow {
+          position: absolute;
+          bottom: 43%;
+          left: -31.5px;
+          width: 0;
+          height: 0;
+          border-top: 17px solid transparent;
+          border-right: 17px solid #FFFFFF;
+          border-bottom: 17px solid transparent;
+          border-left: 17px solid transparent;
+          z-index: 10;
+        }
+
+        #arrow-border {
+          position: absolute;
+          bottom: 42.5%;
+          left: -34px;
+          width: 0;
+          height: 0;
+          border-top: 17.5px solid transparent;
+          border-right: 17.5px solid rgba(150, 150, 150, 0.4);
+          border-bottom: 17.5px solid transparent;
+          border-left: 17.5px solid transparent;
+          z-index: 5;
+        }
+
+
+        button {
+          margin: 30px 0;
+          width: 35%;
+        }
+      }
+
+      h1 {
+        font-weight: 500;
+      }
+
+      table {
+        width: 100%;
+        height: fit-content;
+      }
+
+      .table {
+        margin: 14px auto;
+        border-radius: 5px;
+
+        .increment-btn {
+          width: 6%;
+        }
+
+        .decrement-btn {
+          width: 6%;
+        }
+
+        .amount-input {
+          display: inline;
+          width: 30%;
+          margin: 6px 10px 0 10px;
+        }
+
+        .icon {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

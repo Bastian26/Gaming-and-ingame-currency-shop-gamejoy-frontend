@@ -1,0 +1,93 @@
+<header class="header">
+  <nav class="header-top">
+    <div class="left-header-part">
+      <div class="logo-wrapper">
+        <a routerLink="">
+          <img
+            src="../../../assets/img/logos/logo.png"
+            alt="Logo: GAMEJOY"
+            class="logo"
+        /></a>
+      </div>
+      <div class="input-field nopad">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (keyup.enter)="searchForTerm()"
+          class="form-control search"
+          placeholder="Suchen..."
+        />
+      </div>
+    </div>
+    <div class="right-header-part">
+      <i class="material-icons notification-icon">notifications</i>
+      <div class="language-picker" (click)="toggleDropdown()">
+        <span class="current-language flag-icon flag-icon-{{selectedLanguage.code | lowercase}}"></span>
+        <i class="arrow-icon material-icons">keyboard_arrow_{{isOpen === true ? 'left' : 'down'}}</i>
+        <ul *ngIf="isOpen">
+          <li class="language-item" *ngFor="let language of languages" (click)="onSelectLanguage(language)">
+            <span class="flag-icon flag-icon-{{language.code | lowercase}}"></span>
+            <span class="language-name">{{ language.name }}</span>
+          </li>
+        </ul>
+      </div>
+      <a routerLink="account" class="account-link">
+        <i class="material-icons user-icon" *ngIf="user === null">supervised_user_circle</i>
+      </a>
+      <div class="basket-wrapper" (click)="navigate('/basket')">
+        <span>10</span>
+        <i class="material-icons basket-icon">shopping_cart</i>
+      </div>
+      <div class="verified-user" *ngIf="user !== null">
+        <a routerLink="account" class="account-link">
+          <span class="welcome-text">{{ 'header.welcome-text' | translate : {name: user.firstName} }}</span>
+          <i class="material-icons icon verified-user-icon">verified_user</i>
+        </a>
+      </div>
+      <i class="material-icons logout-icon" (click)="logout()">logout</i>
+    </div>
+  </nav>
+  <div class="header-bottom">
+    <div class="btn-wrapper">
+      <div class="all-games-dropdown-btn navbar-item">
+        <button
+          mat-button
+          [matMenuTriggerFor]="games"
+          class="showAllGamesDropDownBtn"
+        >
+          {{ "header.nav.categories" | translate }}
+        </button>
+
+        <mat-menu #games="matMenu" class="chooseGameNestedButton">
+          <button (click)="navigate('wow-overview')" mat-menu-item [matMenuTriggerFor]="wow">WoW</button>
+          <button (click)="navigate('#')" mat-menu-item [matMenuTriggerFor]="newWorld">New World</button>
+          <button (click)="navigate('#')" mat-menu-item [matMenuTriggerFor]="newWorld">Bethesda Games</button>
+          <button (click)="navigate('#')" mat-menu-item [matMenuTriggerFor]="newWorld">Rockstar Games</button>
+          <button (click)="navigate('#')" mat-menu-item [matMenuTriggerFor]="newWorld">EA Games</button>
+        </mat-menu>
+
+        <mat-menu #wow="matMenu" class="chooseGameNestedButton">
+          <button (click)="navigate('/wow/retail-gold')" mat-menu-item [matMenuTriggerFor]="wowRetail">WoW Retail Gold</button>
+          <button (click)="navigate('/wow/classic-gold')" mat-menu-item [matMenuTriggerFor]="wowClassic">WoW Classic Gold</button>
+        </mat-menu>
+
+        <mat-menu #newWorld="matMenu" class="chooseGameNestedButton">
+          <button (click)="navigate('#')" mat-menu-item>Taler</button>
+        </mat-menu>
+
+        <mat-menu #wowRetail="matMenu" class="chooseGameNestedButton">
+          <button (click)="navigate('#')" mat-menu-item>Gold</button>
+        </mat-menu>
+
+        <mat-menu #wowClassic="matMenu" class="chooseGameNestedButton">
+          <button (click)="navigate('#')" mat-menu-item>Gold</button>
+        </mat-menu>
+      </div>
+
+      <a routerLink="account" class="navbar-item">{{ "header.nav.account" | translate }}</a>
+      <a routerLink="help" class="navbar-item">{{ "header.nav.help" | translate }}</a>
+      <a routerLink="payment-options" class="navbar-item">{{ "header.nav.payment-options" | translate }}</a>
+      <a routerLink="about" class="navbar-item">{{ "header.nav.about" | translate }}</a>
+    </div>
+  </div>
+</header>

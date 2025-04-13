@@ -1,0 +1,153 @@
+.game-properties-bar {
+  display: flex;
+  position: relative;
+
+  .switcher-tab-servers {
+    margin-left: 0px;
+  }
+
+  .switcher-tab-fractions {
+    margin-left: 15px;
+  }
+
+  .btn  {
+    width: 150px;
+    margin-left: 15px;
+
+    ::after {
+      color: red;
+    }
+  }
+
+  .server-menu {
+    background: rgba(#3a3e78, 0.8);
+    border-radius: 5px;
+    margin-left: 15px;
+    color: white;
+    border: 2px solid #6679fa;
+    padding: 0 10px 0 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+
+    .server-menu-option {
+      padding: 3px 5px 3px 5px;
+    }
+  }
+
+  .gold-sell-btn {
+    color: white;
+    border: transparent;
+    border-radius: 5px;;
+    background-color: rgba(102, 121, 250, 0.5);
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+    position: absolute;
+    right: 200px;
+    height: 2.3rem;
+
+    .add-icon {
+      font-size: 1.6rem;
+    }
+
+    span {
+      margin: 0 5px 0 5px;
+    }
+
+    &:hover {
+      background-color: rgba(59, 59, 134, 0.5);
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  z-index: 9999; /* Ensure that modal is on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 50%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+
+  button {
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 0px;
+    border-radius: 5px;
+    height: 2.3rem;
+  }
+
+  // Css of the grid system in the sell modal
+  .grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    grid-template-rows: auto auto auto auto auto auto; /* 5 Rows */
+    gap: 16px; /* Gap/Margin between grid elements */
+  }
+
+  .form-item {
+    background-color: #f0f0f0; // Background clor of form item
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .form-item-avatar {
+    grid-column: 3; /* Horizontally position of column 3 */
+    grid-row: 1 / span 4; /* Align over 4 rows */
+    position: relative;
+
+    .avatar-img {
+      width: 57%;
+      height: auto;
+      position: absolute;
+      top: 20%;
+      left: 22%;
+    }
+  }
+
+  .form-item-btn-close {
+    grid-column: 1; /* Horizontally position of column 1*/
+    grid-row: 6; /* Vertically position of row 5 */
+    background-color: #e0e0e0;
+
+    background: rgba(129, 127, 127, 0.51);
+    color: #303030;
+
+    &:hover {
+      background: #454444;
+      color: white;
+    }
+  }
+
+  .form-item-btn-sell {
+    grid-column: 3; /* Horizontally position of column 3 */
+    grid-row: 6; /* Vertically position of row 5 */
+    background-color: #e0e0e0;
+
+    background: rgba(109, 97, 193, 0.51);
+    color: #303030;
+
+    &:hover {
+      background: #6679fa;
+      color: white;
+    }
+  }
+
+  .form-item-checkbox {
+    background-color: white;
+
+  }
+}

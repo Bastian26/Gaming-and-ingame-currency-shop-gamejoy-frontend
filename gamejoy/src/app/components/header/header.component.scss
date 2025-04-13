@@ -1,0 +1,284 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #171E26;
+  color: rgb(217, 217, 227);
+  font-family: "TT Interphases", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+
+  .header-top {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .left-header-part {
+      display: flex;
+      width: fit-content;
+
+      .logo-wrapper {
+        width: 17%;
+        height: 100%;
+        margin-left: -4px;
+        text-align: center;
+
+        .logo {
+          height: 83px;
+          width: auto;
+          margin: 10px 0px 0px 14px;
+
+        }
+      }
+      .input-field .search {
+        width: 20rem;
+        margin: 40px 0 0 200px;
+        height: 2.3rem;
+        background: rgb(237, 237, 237);
+      }
+    }
+
+    .right-header-part {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .language-picker {
+        position: relative;
+        width: 11%;
+        height: 2.3rem;
+        background: rgb(237, 237, 237);
+        margin: 40px 10px 0 0;
+        padding: 5px;
+        border-radius: 5px;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+
+      .language-picker ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 2.3rem;
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        top: calc(100% + 3px); /* Aligns the element on the bottom position of .language-picker (100% is height from parent)*/
+        left: 0; /* align element at the left of.language-picker-Elements */
+
+        .language-item {
+          padding: 5px;
+          width: 100%;
+          height: 2.3rem;
+          border-bottom: 1px solid rgba(50, 50, 50, 0.4);
+          background-color: rgb(237, 237, 237);
+          color: rgb(50, 50, 50);
+          display: flex;
+          justify-content: space-between;
+
+          .language-name {
+            margin: 3.7px 3px 0 0px;
+            font-size: 1.2rem;
+            font-weight: 530;
+          }
+
+          .arrow-icon {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .account-link {
+        color: rgb(237, 237, 237);
+        padding-left: 15px;
+
+        &:hover {
+          color: #F1C400;
+        }
+      }
+
+      .user-icon {
+        text-align: center;
+        width: 11%;
+        margin: 42px 10px 0 0;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: #F1C400;
+        }
+      }
+
+      .verified-user {
+        position: relative;
+        text-align: center;
+        width: 25%;
+        margin: 42px 0 0 0;
+        cursor: pointer;
+
+        .welcome-text {
+          position: absolute;
+          right: 45px;
+          top: 8px;
+          width: 120px;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+          display: inline-block;
+        }
+
+        .verified-user-icon {
+          position: absolute;
+          right: 20px;
+          font-size: 2rem;
+        }
+      }
+
+      .basket-wrapper {
+        text-align: center;
+        width: 13%;
+        margin: 42px 0 0 -10px;
+        cursor: pointer;
+        color: rgba(237, 237, 237, 0.4);
+        position: relative;
+
+        span {
+          position: absolute;
+          left: 0;
+          top: 7px;
+          left: 10px;
+          font-size: 1rem;
+        }
+
+        .basket-icon {
+          font-size: 2rem;
+          padding-left: 5px;
+        }
+
+        &:hover {
+          color: #F1C400;
+        }
+      }
+
+      .notification-icon {
+        text-align: center;
+        width: 11%;
+        margin: 42px 10px 0 -10px;
+        font-size: 1.35rem;
+        cursor: pointer;
+        color: rgba(237, 237, 237, 0.4);
+
+        &:hover {
+          color: #F1C400;
+        }
+      }
+
+      .logout-icon {
+        text-align: center;
+        width: 11%;
+        margin: 42px 0 0 -10px;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgba(237, 237, 237, 0.4);
+
+        &:hover {
+          color: #F1C400;
+        }
+      }
+    }
+  }
+
+  .header-bottom {
+    max-height: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(170, 170, 170, 0.3);
+    background-color: #171E26;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+
+    .btn-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+
+      .navbar-item {
+        flex: 1; /* Alle Elemente nehmen gleich viel Platz ein */
+        padding: 10px; /* Fügen Sie Padding hinzu, um den Abstand zwischen den Elementen zu erhöhen */
+        border-right: 1px solid rgba(170, 170, 170, 0.3);
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+
+        &:first-child {
+          padding: 0;
+          border-left: 1px solid rgba(170, 170, 170, 0.3);
+        }
+
+        &:visited {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .showAllGamesDropDownBtn {
+          background-color: #171E26;
+          color: rgb(217, 217, 227);
+          height: 100%;
+          width: 100%;
+          border: 0;
+          font-size: inherit;
+          font-family: inherit;
+        }
+
+        .showAllGamesDropDownBtn:hover {
+          color: #F1C400;
+          background-image: linear-gradient(
+              89.96deg,
+              rgba(37, 47, 60, 1) 0.2%,
+              rgba(27, 34, 44, 0.106) 99.69%
+          );
+        }
+      }
+
+      .navbar-item:hover {
+        color: #F1C400;
+        //background: #1b222c;
+        background-image: linear-gradient(
+            89.96deg,
+            rgba(37, 47, 60, 1) 0.2%,
+            rgba(27, 34, 44, 0.106) 99.69%
+        );
+      }
+    }
+  }
+}
+
+::ng-deep .chooseGameNestedButton {
+  margin-top: 0.035rem;
+  width: 46rem;
+
+  & > * {
+    background-color: #273544;
+  }
+
+  button {
+    color: rgb(217, 217, 227);
+  }
+}
+
+::ng-deep .mat-form-field:nth-child(1) {
+  background: #5F73FA;
+}

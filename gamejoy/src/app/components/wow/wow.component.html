@@ -1,0 +1,13 @@
+<div class="wow-wrapper">
+  <aside>
+    <a
+      [href]="link.url"
+      *ngFor="let link of navbarLinks"
+      [ngClass]="{ 'active-element': link.active }"
+      (click)="setActiveLink(link)"
+    >
+      <span>{{ link.label }}</span>
+    </a>
+  </aside>
+  <router-outlet></router-outlet>
+</div>

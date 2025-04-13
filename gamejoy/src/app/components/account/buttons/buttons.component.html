@@ -1,0 +1,11 @@
+<div class="row ">
+  <div class="col-md-12 text-center" style="marginTop: 30px">
+
+    <button class="btn btn-primary" style="margin: 10px" *ngIf="isLoggedIn === false"
+    (click)="loginEvent.emit()">{{ "account.form.sign-in" | translate }}</button>
+
+    <button class="btn btn-dark" style="margin: 10px" *ngIf="isLoggedIn === true"
+            (click)="logoutEvent.emit()">{{ "account.form.logout" | translate }}</button>
+  </div>
+</div>
+

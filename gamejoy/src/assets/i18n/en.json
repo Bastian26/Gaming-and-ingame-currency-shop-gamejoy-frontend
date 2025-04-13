@@ -1,0 +1,127 @@
+{
+  "header": {
+    "nav": {
+      "categories": "Categories",
+      "account": "Account",
+      "help": "Help",
+      "payment-options": "Payment Options",
+      "about": "About"
+    },
+    "welcome-text": "Hello {{name}}!"
+  },
+
+  "wow": {
+    "retail": {
+      "gold-message": "Gold in Dragonflight is still the main currency that offers you many opportunities. With gold you can buy mounts, pets, transmog items and most importantly consumables for each content, and even mythic raid gear."
+    },
+    "classic": {
+      "gold-message": "In the world of World of Warcraft (CLASSIC), a popular game worldwide, gold is an important currency that gives you access to all treasures and opportunities. With gold you can equip yourself not only with powerful weapons to face the opponents, but also with the best equipment to protect yourself from all dangers."
+    },
+    "gold-security-hint-message": "GAMEJOY will never ask for gold back. If someone does this, it is a scam.",
+    "offers": "Offers",
+    "fraction": {
+      "horde": "HORDE",
+      "alliance": "ALLIANCE"
+    },
+    "servers": {
+      "all-server-text": "All Server",
+      "server-eu": "EU",
+      "server-us": "US"
+    },
+    "gold-seller-btn-text": "SELL YOUR GOLD",
+    "gold-offer": {
+      "gold-offer-item": {
+        "amount-text": "per",
+        "stock-text": "In Stock",
+        "buy-item": "Buy"
+      }
+    }
+  },
+
+  "account": {
+    "form": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "user-name": "Username",
+      "email": "Email",
+      "tel": "Tel",
+      "password": "Password",
+      "birthdate": "Birthdate",
+      "address": {
+        "address": "Address",
+        "street": "Street and House Number",
+        "postalcode": "ZIP",
+        "state": "State"
+      },
+      "register": "Register",
+      "sign-in": "Sign In",
+      "logout": "Logout"
+    },
+    "welcome-page": {
+      "headline": "Welcome to GAMEJOY!",
+      "login-text": "Log in to see your account details."
+    },
+    "account-info": {
+      "personal-data": {
+        "header-text": "Personal Data",
+        "sub-text": "Here you can view and edit your personal information"
+      }
+    },
+    "general-settings": {
+
+    },
+    "orders": {
+
+    },
+    "change-password": {
+      "header-text": "Change password",
+      "sub-text": "Here you can change your password",
+      "old-password-text": "Old password",
+      "new-password-text": "New password",
+      "confirm-new-password-text": "Password confirmation",
+      "confirm-btn": "Change",
+      "password-requirements": {
+        "header-text": "Password requirements:",
+        "requirements": {
+          "min-length": "must be 8 characters long",
+          "upper-and-lowercase": "must have 1 uppercase and 1 lowercase letter",
+          "must-contain-numbers": "must contain at least 1 number",
+          "must-contain-spec-charcacters": "must contain special characters"
+        },
+        "password-strength": {
+          "weak": "Weak",
+          "medium": "Medium",
+          "strong": "Strong",
+          "very-strong:": "Very Strong"
+        }
+      }
+    },
+    "game-currencies": {
+      "header-text": "Ingame Currency Amount (Seller option)",
+      "sub-text": "Here you can balance the ingame currencys for your Account",
+      "confirm-btn-text": "Confirm change",
+      "table": {
+        "currency": "Währung",
+        "currency-name": "Währungsname",
+        "game": "Spiel",
+        "change-amount": "Change amount"
+      }
+    }
+  },
+
+
+  "title": "Service feedback for {{company}}",
+  "name": {
+    "label": "Name en",
+    "placeholder": "Enter Name"
+  },
+
+  "submit": {
+    "label": "Submit"
+  },
+
+  "requiredErrorMessage": "This is a required field.",
+  "successfulSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
+  "copyright": "All rights reserved. {{currentYear}} {{company}}"
+
+}

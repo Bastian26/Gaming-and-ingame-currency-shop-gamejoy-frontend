@@ -1,0 +1,91 @@
+aside {
+  width: 80px;
+  height: fit-content;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid #78787880;
+  position: fixed;
+  right: 0;
+  margin-top: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+  padding: 0;
+
+  .asideHeader {
+    background-color: orange;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding-top: 13px;
+    border-radius: 5px 0 0 0;
+  }
+  .iconWrapper {
+    width: 100%;
+    text-align: center;
+    img {
+      margin: 5px 5px 5px 5px;
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  div:nth-child(2) img,
+  div:nth-child(3) img {
+    width: 43px;
+  }
+
+  .iconWrapper:hover {
+    background-color: rgb(220, 220, 220);
+  }
+}
+
+.landing-page-img {
+  width: 100%;
+  height: 90vh;
+  z-index: 0;
+  margin-top: -50px;
+
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    center top,
+    center bottom,
+    color-stop(0, rgba(0, 0, 0, 1)),
+    color-stop(1, rgba(0, 0, 0, 0))
+  );
+}
+
+.expansionsContainer {
+  width: 53%;
+  height: 200px;
+  margin: -600px auto 0 auto;
+  background-color: transparent;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .dragonflightExpansion {
+
+    img {
+      border: 2px solid rgba(255, 215, 0, 0.5);
+      border-radius: 5px;
+      z-index: 1;
+      opacity: 0.86;
+      width: 450px;
+      height: 250px;
+      transition: 0.24s ease;
+    }
+
+    img:hover {
+      border: 2px solid rgba(255, 215, 0, 0.7);
+      width: 470px;
+      height: 260px;
+      opacity: 0.99;
+    }
+  }
+}
